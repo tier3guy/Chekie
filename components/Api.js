@@ -1,5 +1,5 @@
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 export const greetMessage = () => {
   const date = new Date();
@@ -13,7 +13,7 @@ export const greetMessage = () => {
 
 export const date = () => {
   const date = new Date();
-  return `${days[date.getDay()-1]}, ${months[date.getMonth()-1]} ${date.getDate()}, ${date.getFullYear()}`
+  return `${days[date.getDay()]}, ${months[date.getMonth()-1]} ${date.getDate()}, ${date.getFullYear()}`
 }
 
 export const getTime = () => {

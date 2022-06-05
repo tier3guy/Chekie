@@ -21,7 +21,7 @@ export const Todo = () => {
   const uid = new ShortUniqueId({ length: 24 });
 
   const [todo, setTodo] = useState('');
-  const [tasks, setTasks] = useState([tasks]);
+  const [tasks, setTasks] = useState([]);
 
   async function fetchTasks() {
     try {
@@ -98,13 +98,15 @@ export const Todo = () => {
 
       <FlatList style={styles.cardsContainer}
         data={tasks}
-        renderItem={(element) => (
-          <Card
-            task={element?.item.task}
-            date={element?.item.date}
-            handleDeleteTask={handleDeleteTask}
-            id={element?.item.id} />
-        )}
+        renderItem={({ item }) => {
+          return (
+            <Card
+              task={item.task}
+              date={item.date}
+              handleDeleteTask={handleDeleteTask}
+              id={item.id} />
+          )
+        }}
       />
 
       <TouchableOpacity style={styles.button} onPress={handleAddTodo}>

@@ -15,10 +15,7 @@ export const Card = ({ task, date, handleDeleteTask, id }) => {
 
   return (
     <TouchableOpacity style={styles.container} onPress={() => {} } onLongPress={ () => handleDeleteTask(id) }>
-      <Text style={[styles.cardTaskText, {
-        textDecorationLine: (done) ? 'line-through' : 'none',
-        textDecorationColor: '#f2f2f2'
-      } ]}>{task}</Text>
+      <Text style={styles.cardTaskText}>{task}</Text>
       <Text style={styles.cardDateText}>{date}</Text>
     </TouchableOpacity>
   )
