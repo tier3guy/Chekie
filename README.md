@@ -1,4 +1,4 @@
-# Chekie
+# Checkie
 A cross platform todo application built under the tech of React Native Expo.
 
 ### How to download the application ?
